@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Список машин</title>
+</head>
+<body>
+<h2>Список машин:</h2>
+<br/>
+<div>
+    <table border="2">
+        <tr>
+            <th>Модель</th>
+            <th>Двигатель</th>
+            <th>Мощность двигателя, л.с.</th>
+        </tr>
+        <tr th:each ="car : ${listOfCars}">
+            <td th:utext="${car.getModel()}">...</td>
+            <td th:utext="${car.getEngine()}">...</td>
+            <td th:utext="${car.getHorsePower()}">...</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
